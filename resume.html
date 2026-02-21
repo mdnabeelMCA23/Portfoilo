@@ -1,168 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- divinectorweb.com -->
 <head>
-    <meta charset="UTF-8"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohammed Nabeel Resume</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
-    <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family: 'Montserrat', sans-serif;
-    }
-    body {
-        background: #00b6c4;
-    }
-    .container {
-        background: #f5f5f5;
-        max-width: 800px;
-        margin: 60px auto;
-        height: 1250px;
-        padding: 20px;
-        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
-    }
-    .header {
-        text-align: center;
-    }
-    .header h1 {
-        margin-bottom: 10px;
-    }
-    .header h3 {
-        text-transform: uppercase;
-        font-size: 15px;
-        font-weight: 500;
-    }
-    .img-area {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 25px auto;
-        border: 15px groove deepskyblue;
-    }
-    .img-area img {
-        width: 100%;
-    }
-    .main {
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .left {
-        flex: 1;
-        padding: 30px;
-    }
-    .left p {
-        line-height: 2;
-    }
-    .left ul li {
-        line-height: 2;
-    }
-    h2 {
-        background: #00b6c4;
-        padding: 15px;
-        color: #fff;
-        margin: 30px 0;
-        font-size: 20px;
-        border-radius: 0 50px 50px 0;
-    }
-    .right {
-        flex: 1;
-        padding: 30px;
-    }
-    .right h3 {
-        margin-bottom: 15px;
-    }
-    .right p {
-        line-height: 2.9;
-    }
-    .right ul li {
-        line-height: 2;
-    }
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-        .container {
-            width: 95%;
-            height: auto;
-        }
-        h2 {
-            font-size: 18px;
-        }
-    }
-    @media screen and (max-width: 600px) {
-        .main {
-            flex-direction: column;
-        }
-        .left, .right {
-            flex: none;
-            width: 100%;
-        }
-        .container {
-            width: 95%;
-            height: auto;
-        }
-        h2 {
-            font-size: 15px;
-        }
-    }
-</style>    
-
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mohammed Nabeel | Resume</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:#0f172a;--accent:#2563eb;--muted:#64748b;--bg:#f1f5f9}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui}
+body{background:var(--bg);padding:30px}
+.resume{max-width:950px;margin:auto;background:white;display:grid;grid-template-columns:300px 1fr;box-shadow:0 10px 35px rgba(0,0,0,.15)}
+.sidebar{background:var(--primary);color:white;padding:28px}
+.profile{text-align:center;margin-bottom:25px}
+.profile img{width:130px;height:130px;border-radius:50%;object-fit:cover;border:4px solid #1e293b}
+.profile h1{font-size:22px;margin-top:12px}
+.role{color:#93c5fd;font-size:14px;margin-top:4px}
+.section{margin-top:25px}
+.section h2{font-size:13px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px;color:#93c5fd}
+.section p,.section li{font-size:13px;color:#e2e8f0;line-height:1.6}
+.section ul{list-style:none}
+.main{padding:32px}
+.header{border-bottom:2px solid #e2e8f0;padding-bottom:12px;margin-bottom:20px}
+.header h2{font-size:22px;color:var(--primary)}
+.contact{color:var(--muted);font-size:14px;margin-top:5px}
+.block{margin-bottom:22px}
+.block h3{font-size:16px;color:var(--primary);margin-bottom:6px}
+.block span{font-size:13px;color:var(--muted)}
+.block ul{margin-top:8px;padding-left:18px}
+.block li{margin-bottom:6px;font-size:14px;color:#334155}
+.badge{display:inline-block;background:#e2e8f0;padding:4px 8px;border-radius:6px;margin:4px;font-size:12px}
+@media print{body{background:white;padding:0}.resume{box-shadow:none}}
+@media(max-width:780px){.resume{grid-template-columns:1fr}.sidebar{text-align:center}}
+</style>
 </head>
-<body>    
-    <div class="container">
-      <div class="header">
-        <div class="img-area">
-            <img src="assets/img/profile_1.jpeg" alt="">
-        </div>
-        <h1>Mohammed Nabeel P</h1>
-        <h3>Role for Web Developer </h3>
-      </div>
+<body>
+<div class="resume">
+  <aside class="sidebar">
+    <div class="profile">
+      <img src="assets/img/profile_1.jpeg" alt="profile">
+      <h1>Mohammed Nabeel P</h1>
+      <div class="role">Software Developer</div>
+    </div>
 
-      <div class="main">
-        <div class="left">
-          <h2>Personal Information</h2>
-          <p><strong>Name:</strong>Mohammed Nabeel P</p>
-          <p><strong>Age:</strong> 20</p>
-          <p><strong>Email:</strong> pmdnabeel11163@gmail.com</p>
-          <p><strong>Phone:</strong> +91 6374031963</p>
-          <h2>Skills</h2>
-          <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-          </ul>
-          <h2>Soft Skill</h2>
-          <p>Observation </p>
-          <p>Adaptability</p>
-          <p>Communication</p>
-          <p>Multi-tasking</p>
-          <p>Leadership</p>
+    <div class="section">
+      <h2>Contact</h2>
+      <p>Bengaluru, India</p>
+      <p>+91 6374031963</p>
+      <p>peermohammednabeel@gmail.com</p>
+    </div>
 
-        </div>
-        
-        <div class="right">
-          <h2>Internship</h2>
-          <h3>Creamzo Tech</h3>
-          <p><strong>Position:</strong> As Graphic Designer</p>
-          <p><strong>Duration:</strong> 3 months -2022</p>
+    <div class="section">
+      <h2>Skills</h2>
+      <ul>
+        <li>JavaScript, Python</li>
+        <li>React.js / React Native</li>
+        <li>Node.js / Express</li>
+        <li>MongoDB</li>
+        <li>Git & GitHub</li>
+        <li>REST APIs</li>
+        <li>Azure Basics</li>
+      </ul>
+    </div>
 
-          <h2>Education</h2>
-          <h3>BCA-Bachelor of Computer Applications-8.2 CGPA</h3>
-          <p>Islamiah College - Thiruvalluvar University
-            Completed in 2023
-            </p> <br>
-          <h3>MCA-Full-Stack Web Developer with MERN</h3>
-          <p>RVS College of Arts and Science,2023-2025</p>
-          
-        </div>
-      </div>
-    </div> 
+    <div class="section">
+      <h2>Languages</h2>
+      <p>English</p>
+      <p>Tamil</p>
+      <p>Hindi</p>
+      <p>Urdu</p>
+    </div>
+  </aside>
 
+  <main class="main">
+    <div class="header">
+      <h2>Profile Summary</h2>
+      <div class="contact">MCA graduate and MERN stack developer passionate about building scalable web and mobile applications and learning cloud & DevOps technologies.</div>
+    </div>
+
+    <div class="block">
+      <h3>Internship — Software Engineer Intern</h3>
+      <span>Indecomm Global Services | Aug 2025 – Jan 2026</span>
+      <ul>
+        <li>Built responsive applications using React.js and Node.js</li>
+        <li>Collaborated with teams to deliver product features</li>
+        <li>Optimized performance and fixed bugs</li>
+        <li>Assisted deployment and documentation</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Projects</h3>
+      <ul>
+        <li><b>AI Chat Assistant</b> – Automated responses using APIs</li>
+        <li><b>Quiz Mobile App</b> – React Native app with authentication</li>
+        <li><b>E‑Commerce Website</b> – MERN platform with cart & login</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Education</h3>
+      <ul>
+        <li>MCA — RVS College of Arts & Science (2023–2025)</li>
+        <li>BCA — Islamiah College (2020–2023)</li>
+      </ul>
+    </div>
+
+    <div class="block">
+      <h3>Certifications</h3>
+      <span class="badge">AI Tools Workshop</span>
+      <span class="badge">Web Development</span>
+      <span class="badge">JavaScript Practicals</span>
+    </div>
+  </main>
+</div>
 </body>
 </html>
-
-
